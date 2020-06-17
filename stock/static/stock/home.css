@@ -1,0 +1,187 @@
+
+.material-icons.icn {
+	opacity: 1;
+	font-size: 12px;
+}
+
+
+
+.fname{
+	background-color: rgb(34, 34, 34);
+	width: 95%;
+	padding-left: 10px;
+	margin-left: 30px;
+	border: 1px gray solid;
+	border-radius: 5px;
+	color: gray;
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	padding: 4px 10px;
+	padding-left: 30px;
+	text-align: left;
+	text-decoration: none;
+}
+
+i:hover {
+	color:white;
+}
+
+#greenfont {
+	color: #00AD5F;
+}
+
+h3 {
+	text-align: center;
+	margin: auto;
+	color: rgb(100,100,100);
+	font-family: 'Lato', sans-serif;
+	margin-top: 10px; 
+	padding-bottom: 10px;
+	width: 60%;
+	text-align: center;
+	border-bottom: 1px solid rgb(100,100,100);
+}
+
+table.body {
+	margin-top: 10px;	
+	background-color: rgb(34, 34, 34);
+	color: rgb(128, 128, 128);	
+	border: 0px;
+	padding: 10px;
+	border-collapse: collapse;
+
+	}
+.body thead th {
+	background-color: rgb(52, 52, 52);
+	color: #00AD5F;
+	text-align: left;
+	padding: 6px 5px;
+	cursor: pointer;
+	}
+
+.body thead th:hover {
+	color: gainsboro;
+
+}
+.body td {
+	padding: 6px 5px;
+	}
+
+
+ #hide{
+	color: rgb(34, 34, 34);
+	padding-left: 5px;
+	transition: 0.2s;
+}
+
+tr:hover #hide{
+	color: #00AD5F;
+}
+
+.body tr {
+	transition: background-color 0.3s;
+}
+
+body .body tr:hover {
+	background-color: rgb(60, 60, 60);
+	color: #00AD5F;
+}
+
+.buttons {
+	position: fixed;
+	display: inline;
+	bottom: 50px;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+
+.foot {
+	position: fixed;
+	bottom: 0;
+	border-bottom: 0px;
+	text-align: center;
+	padding-left: 0px;
+	background-color: #121212;
+}
+.foot th {
+	
+}
+
+.center {
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	transition: 0.2s;
+}
+
+input {
+	width: 20%;
+	margin-top: 20px;
+	padding: 8px 20px;
+	border-radius: 20px;
+	background-color: #ffefff;
+	outline: none;
+	transition: 0.5s;
+	margin-top: 40px;
+}
+input:focus {
+	width:40%;
+	margin-top: 40px;
+}
+
+.center .popuptext {
+	display: none;
+	color: gray;
+	background-color: #111;
+	padding: 10px 20px;
+	transition: 1s;
+	opacity:0;
+	border-radius: 8px;
+
+}
+
+.center .popuptext{
+	visibility: hidden;
+	display:none;
+}
+.popup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.center .show#myPopup {
+	visibility: visible;
+	position: absolute;
+	-webkit-animation: fadeIn 5s;
+	animation: fadeIn 5s;
+	display: block;
+	left:40%;
+	text-align: center;
+	margin: auto;
+	opacity: 0;
+	
+
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;} 
+	30%   {opacity: 1;}
+	60%   {opacity: 1;}
+	100%   {opacity: 0;}
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;} 
+	30%   {opacity: 1;}
+	70%   {opacity: 1;}
+	100%   {opacity: 0;}
+}
+
+

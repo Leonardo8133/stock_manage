@@ -1,0 +1,250 @@
+
+.maingroup, #remove {
+	margin: auto;
+	width: 50%;
+	border: 1px solid gray;
+	border-radius: 16px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding: left:5px;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+h1 {
+
+	color: gray;
+	text-align: center;
+	width: 95%;
+
+	font-size: 26px;
+}
+
+h2 {
+	margin-top: 0px;
+	font-family: 'Lato', sans-serif;
+	color: gray;
+	font-size: 26px;
+}
+
+p {
+	color: rgb(128, 128, 128);
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+}
+
+.suc p  {
+	font-size: 18px;
+	width: 100%;
+	text-align: center;
+	color: rgb(200, 200, 200);
+	margin-top: 30px;
+	padding: 10px 0px;
+}
+
+.red p{
+	background-color: rgba(255, 100, 100, 0.5);
+}
+
+.grn p{
+	background-color: rgba(100, 255, 100, 0.5);
+
+}
+#add, #remove{
+	display: none;
+	margin-top: 10px;
+}
+
+
+
+.tabs-button {
+	margin-top: 20px;
+	width: 60%;
+	margin: auto;
+	text-align: center;
+
+}
+.tabs-button h1 {
+	font-size: 40px;
+	color:white;
+	margin-top: 30px;
+	
+}
+.tabs-button p {
+	text-align: center;
+	padding-bottom: 10px;
+	
+	padding-left: 5px;
+	border-bottom: 1px solid gray;
+
+}
+
+.tabs-button button {
+	padding:10px 10px;
+	background-color: black;
+	border: 1px solid gray;
+	color: white;
+	width: 40%;
+	margin-top: 10px;	
+	border-radius: 5px;
+}
+
+
+ .red {
+ 	color: white;
+ }
+
+.label, h1 {
+	margin: 0px 0px 5px 10px;
+	color: rgb(128, 128, 128);
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	display: block;
+}
+
+
+.help {
+	margin-left: 30px;
+}
+
+#obs {
+	margin-left: 10%;
+}
+
+.formgroup {
+	margin: 15px;
+	display: block;
+	position: relative;
+
+}
+.formgroup, .fname {
+	width: 84%;
+	margin-top: 1px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding: 7px;
+	padding-left: 20px;
+}
+
+.submit {
+	border: 1px solid black;
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	padding: 5px 30px;
+	border-radius: 5px;
+	margin: 5px 20px;
+	transition: 0.7s;
+	outline:none;
+	width: 91%;
+	text-align: center;
+	background-color: rgba(100, 200, 100, 0.3);
+	color: lightgray;
+	
+	margin-top: 20px;]
+
+
+}
+
+.submit:hover {
+	background-color: rgba(100, 200, 100, 0.8);
+	color:black;
+}
+
+#remove input[type=text] {
+  width: 230px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition:  0.4s ease-in-out;
+  padding: 10px 20px;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 6px;
+  color: white;
+  background-color: rgba(12, 12, 12, 0.8);
+
+}
+
+#myUL {
+	list-style-type: none;
+	width: auto;
+	margin: 10px;
+	padding: 5px 20px;
+	background-color: rgba(12, 12, 12, 0.8);
+	border: 2px solid black;
+}
+
+#myUL li a {
+	display: block;
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	text-align: left;
+
+}
+.item_table{
+	padding: 0px 20px;
+}
+.item_table td{
+	text-align: right;
+	width: 200px;
+}
+
+.inf_div {
+	background-color: black;
+	
+	border-top: 0px;
+	
+}
+.inf_div p {
+	margin-top: 0px;
+}
+
+.inf_div div {
+	padding:20px;
+}
+#rmv {
+	background-color: rgba(255, 105, 97, 0.1);
+	border-radius: 7px;
+	padding: 10px 20px;
+	width: 100%;
+	color: gray;
+	border:0px;
+
+}
+
+#rmv:hover {
+	background-color: rgba(255, 105, 97, 0.8);
+	color:white;
+}
+
+#rmv a:hover{
+	background-color: rgba(255, 105, 97, 0);
+	color:white;
+}
+#remove input[type=text]:focus {
+  transform:  scale(1.2);
+}
+
+.maingroup #remove {
+	position: absolute;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	margin-top: 10px;
+
+}
+.errorlist {
+	color: #ED4337;
+}
+
+#none {
+	display: none;
+}
+
+.black {
+	background-color: black;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	
+
+}
+
+.tab #remove div{
+	text-align: center;
+}

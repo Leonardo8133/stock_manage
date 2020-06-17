@@ -1,0 +1,49 @@
+{% extends 'stock/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+	<title>Stock - History</title>
+	<link rel="stylesheet" href="{% static 'stock/history.css' %}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="{% static 'stock/scripts.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<h2 class="title">History Entries</h2>
+<div class="histdiv">
+	
+		{% for hist in history %}
+		<table>
+			<tr class="item">
+				<td> {{hist.item.name|truncatechars:25}} </td>
+				<td> Pkey: {{hist.item.pkey}} </td>
+				<td> Desc: {{hist.item.description|truncatechars:18}} </td>
+				<td> Category: {{hist.item.category}}</td>
+				<td> id: {{hist.item.id}}</td>
+			</tr>
+			<tr class="his">	
+				<td>Added/Removed : 
+				{% if hist.transition > 0 %}
+					 <pre style="color: #77DD77; display: inline;">{{hist.transition}}</pre>
+				{% else %}
+					<pre style="color: #FF4941; display: inline;">{{hist.transition}}</pre>
+				{% endif %}
+				</td>
+				<td><pre style="color: azure; display: inline; font-size: 14px;">Before {{hist.actual}} --> {{hist.total}} After</pre></td>						
+				<td>{{hist.time|naturaltime}}</td>
+				<td>{{hist.time}}</td>
+				<td>User : {{hist.user}}</td>	
+			</tr>
+
+		{% empty %}
+		<tr><td>No entries in database</td></tr>
+		</table>
+		{% endfor %}
+	
+</div>
+{% endblock %}
+
+
+
+

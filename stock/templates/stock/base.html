@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="{% static 'stock/base.css' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap" rel="stylesheet">
+	{% block title %}
+	{% endblock %}
+</head>
+
+	<body style="font-family: 'Lato', sans-serif;">
+			<nav class="top-bar">
+				<div class='icon'></div>
+				<ul class='title-area'>
+					<li class='home'> <a href="{% url 'index' %}"> Home </a></li>
+					<li class='manage'><a href="{% url 'manage' %}"> Manage </a></li>
+					<li class='history'><a href="{% url 'history' %}"> History </a></li>
+					<li class='user'><a href="{% url 'admin:index' %}"> User </a></li>
+					     
+				</ul>
+			</nav>
+		<table class='cols'>
+			<tr>
+				<th> Database Name: <div id="greenfont"> FullSock.db </div></th>
+				<th> User: <div id="greenfont"> {{request.user}} </div></th>
+				<th> Last Login: <div id="greenfont"> {{request.user.last_login}} </div></th>
+			</tr>
+		</table>
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>

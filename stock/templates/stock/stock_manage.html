@@ -1,0 +1,117 @@
+{% extends 'stock/base.html' %}
+{% load static %}
+
+{% block title %}
+	<title>Stock - Manager</title>
+	<link rel="stylesheet" href="{% static 'stock/manager.css' %}">
+	<script src="{% static 'stock/scripts.js' %}"></script>
+
+{% endblock %}
+<body>
+	{% block content %}
+		{% if not request.user.is_authenticated %}
+		<div class='suc red'><p> You need to login to access this page </p></div>
+		{% else %}
+	
+	<div class="tabs-button">
+		<h1 id=#tit style="color: gray; font-size: 24px;"> Stock Manager </h1>
+		<p style="color: gray; width: 100%; margin:auto;">	Register or Remove items from database, </p>
+		<button    onclick="openTab('add')" class="bt add"   >Register</button>
+		<button onclick="openTab('remove')" class="bt remove">Remove</button>
+	</div>
+			{% if pkey %}
+			<div class='suc red'><p>Item Pkey: {{ pkey }} deleted</p></div>
+			{% endif %}
+			{% if sucess %}
+			<div class='suc grn'><p> {{ sucess }}</p></div>
+			{% endif %}
+
+
+	
+	<div id="add" class="tab">		
+		<form action="{% url 'manage' %}" method="POST" spellcheck='false'  autocomplete="off">
+			{% csrf_token %}
+			{{ form.management_form }}
+			
+			
+
+
+			<div class='maingroup' style='overflow: auto;'>
+				<h1> Register New Item </h1>
+				<p id = "obs" style="text-align: center; width: 80%; font-size: 14px; "> * Do not register an item that already exists in your database </p>
+				{% for field in form %}
+				<div class='formgroup'>
+					
+					<label class='label'> {{ field.label }} </label>
+					{{ field.errors }}
+					{% if field.help_text %}
+	        			<p class='help'>{{ field.help_text|safe }}</p>
+	        		{% endif %}
+					{{ field }}				
+				</div>
+				{% endfor %}
+				<input class ='submit' type="submit" value="Complete">
+			</div>
+		</form>
+	</div>
+	<div id="remove" class="tab">
+		<div style="text-align: center;">
+		<h2> Remove Item</h1>
+		<p> Use " / " to separate filters. Ex: Wines/1940 </p>
+		</div>
+		<div style="text-align: center;"><input type="text" id="myInput" onkeyup="intSearch()" placeholder="Name, Pkey, Category, Qnt....">
+		
+		<ul id="myUL" >
+			<li id="label">
+				<a>
+					<table class='item_table' style='color: #00AD5F'>
+						<tr>
+							<td>Name</td>
+							<td>P.Key</td>
+							<td>Category</td>
+							<td>Quantity</td>
+						</tr>
+					</table>
+				</a>
+			</li>
+		{% for item in all_products %}
+			<li>
+				<a onclick="remove_item(this)" id="{{item.pkey}}"  style='cursor: pointer;'>					
+					<table class='item_table'>
+						<tr>
+							<td>{{item.name}}</td>
+							<td id="{{item.pkey}}">{{item.pkey}}</td>
+							<td>{{item.category}}</td>
+							<td>{{item.quantity}}</td>
+
+						</tr>
+					</table>
+				</a>
+				<div id="p{{item.pkey}}" class="inf_div" style="text-align: left; display: none;">
+					<div>
+						<p>Name: {{item.name}}</p>
+						<p>Pkey: {{item.pkey}}</p>
+						<p>Category: {{item.category}}</p>
+						<p>Description: {{item.description}}</p>
+						<p>Quantity: {{item.quantity}} un.</p>
+						<p>Price: $ {{item.price}}</p>
+						<p>						
+							<button id="rmv"  value="Remove">
+								<a href= "{% url 'deleted' item.pkey %}" onclick="clicked()">
+								Remove
+								</a>
+							</button>
+						</p>
+					</div>
+				</div>
+			</li>
+			{% empty %}
+			<li> No items in DB </li>
+		{% endfor %}
+			<li id='none'><a>None</a></li>
+		</ul>
+	</div>
+	
+	{% endif %}
+	{% endblock %}
+</body>

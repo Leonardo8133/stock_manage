@@ -1,0 +1,64 @@
+{% extends 'stock/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+	<title>Stock - Home Page</title>
+	<link rel="stylesheet" href="{% static 'stock/home.css' %}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="{% static 'stock/scripts.js' %}"></script>
+{% endblock %}
+
+	{% block content %}
+	<h3 style="font-size: 24px;"> Stock Viewer </h3>
+	<div class='center' style="position: relative;">
+		<span class="popuptext" id="myPopup" style='cursor:pointer;' onclick="fade_p()"> Use " / " to separate filters. Ex: Wines/1940 </span>
+		<input type="text" id="myInput" name="input" placeholder='Search...' class="popup" onkeyup="tableSearch()" onclick="fade_p()">
+
+		
+	</div>
+	<div style="margin-bottom: 50px;">
+		<table class='body' id='mytable' style="overflow-y:auto;">
+			<thead>
+				<th onclick="sortTable123(0)" style="border-top-left-radius: 5px; padding-left: 10px;">ID <i class="material-icons icn">sort</i></th>
+				<th onclick="sortTableABC(1)">Name </th>
+				<th onclick="sortTable123(2)">P.key</th>
+				<th onclick="sortTableABC(3)">Description</th>
+				<th onclick="sortTableABC(4)">Category</th>
+				<th onclick="sortTable123(5)">Qnt.</th>
+				<th onclick="sortTable123(6)">Un.Price</th>
+				<th onclick="sortTable123(7)">Value</th>
+				<th style="width: 5%; padding-right: 1px; border-top-right-radius: 5px"> Manage </th>
+			</thead>
+			{% for item in products %}		
+			<tr>
+				
+				<td id="hide">{{item.id}}</td>
+				<td>{{item.name}}</td>
+				<td id="hide">{{item.pkey}}</td>
+				<td>{{item.description|slice:"50"}}</td>
+				<td>{{item.category}}</td>
+				<td>{{item.quantity}} un.</td>
+				<td>$ {{item.price|intcomma}}/un.</td>
+				<td>$ {% widthratio item.price 1 item.quantity %}</td>
+				<td><a href="{% url 'detail' item.id %}"><i class="material-icons">list</i></a></td>
+				
+			</tr>
+			{% empty %}
+			<tr><td>No products in your database.</td><td> Go to manage section to add new products</td><td>You must to be logged in in order to manage the database</td></tr>
+			{% endfor %}
+
+		</table>
+	</div>
+	
+	<footer>
+		<table class='foot'>
+			<tr>
+				<th>Total Unique Items in Stock: <div id='greenfont' style='display: inline;'> {{ total_products|intcomma }} </div></th>
+				<th>Total Items in Stock: <div id='greenfont' style='display: inline;'> {{ total_items|intcomma }}</div></th>
+				<th>Total Stock Value: <div id='greenfont' style='display: inline;'> $ {{ total_value|intcomma }}</div></th>
+			</tr>
+		</table>
+	</footer>
+</body>
+{% endblock %}

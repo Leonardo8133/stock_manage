@@ -1,0 +1,72 @@
+{% extends 'stock/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+    <title>Stock - ID: {{ item.name }}</title>
+    <link rel="stylesheet" href="{% static 'stock/detail.css' %}">
+    <script src="{% static 'stock/scripts.js' %}"></script>
+{%  endblock %}
+{% block content %}
+<div>
+	{% if sucess %}
+		<h2 class="sucess">{{sucess}}</h2>
+	{% endif %}
+	{% if remove %}
+		<h2 class="remove">{{remove}}</h2>
+	{% endif %}
+</div>
+<div class="mainbox"> 
+    <h2>Product Detail</h2>
+    <table> 
+	        <tr><td>Name:         </td><td>{{item.name}}        </td>	</tr>
+	        <tr><td>Category      </td><td>{{item.category}}	</td>	</tr>
+	        <tr><td>Brand:        </td><td>{{item.brand}}       </td>  		</tr>
+	        <tr><td>Pkey:         </td><td>{{item.pkey}}        </td>   		</tr>
+	        <tr><td>Description.: </td><td>{{item.desciption}}  </td>	</tr>
+	        <tr><td>Quantity:     </td><td>{{item.quantity}} un. <a href="#histtag" class='hist'> History: ({{ history|length }} entries) </a></td> </tr>
+	        <tr><td>Price:        </td><td>$ {{item.price|intcomma}} /un.</td>   </tr>
+	        <tr><td>Value:        </td><td>$ {{value|intcomma}}          </td> 			</tr>
+	        <tr><td colspan="2" style="text-align: center;"><button onclick="hideid('hide')">Add/Remove Items</button></td></tr>
+	        <form action="#" method="POST">
+	        	{% csrf_token %}
+		        <tr>
+		        	<td colspan="2" >
+		        		<input class="hide" style="display: none;" type="number" name="quantity"
+		        		placeholder="Quantity... " min="-20000" max="20000" required="required">
+		        	</td>
+		        </tr>
+		        <tr>
+		        	<td colspan="2">
+		        		<input class="hide subm" style="display: none;" type="submit" name="sub" value="Submit">
+		        	</td>
+		        </tr>
+	    	</form>
+    </table>
+</div>
+<div>
+	<a name="histtag"></a>
+	<table class="histbox">
+	<p style="color: gray; font-size: 20px; text-align: center;">{{ history|length }} History Entries </p>
+	{% for hist in history %}
+		<tr class=histli>
+				
+				<div class='hulbox'>					
+					<td>Added/Removed : 
+					{% if hist.transition > 0 %}
+						 <pre style="color: #77DD77; display: inline;">{{hist.transition}}</pre>
+					{% else %}
+						<pre style="color: #FF4941; display: inline;">{{hist.transition}}</pre>
+					{% endif %}
+					</td>
+					<td><pre style="color: azure; display: inline;">Before   {{hist.actual}} --> {{hist.total}}  After</pre></td>						
+					<td>{{hist.time|naturaltime}}</td>
+					<td>{{hist.time}}</td>
+					<td>User : {{hist.user}}</td>	
+		</tr>
+	{% empty %}
+	<tr><td>No history entries in this product</td></tr>
+	{% endfor %}
+	</table>
+</div> 
+{% endblock %}

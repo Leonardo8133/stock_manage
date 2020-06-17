@@ -1,0 +1,12 @@
+{% load static %}
+body {
+	background-image: url("{% static 'stock/background_texture.jpg' %}")
+}
+.head_table {
+	background-color: #CCCCCC;
+	width: 90%;
+	padding-left: 10px;
+	margin-left: 30px;
+	border: 3px gray solid;
+	border-radius: 4px;
+}
