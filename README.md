@@ -24,8 +24,7 @@ Stock Management in Django
 ### You Add or Remove Products
 
 
-<img src="images/img_4.png" width=50%>
-<img src="images/img_5.png" width=50%>
+<img src="images/img_4.png" style="display:inline;" width=40%><img src="images/img_5.png" style="display:inline;" width=40%>
 
 
 ### View the Complete History
