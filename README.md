@@ -49,7 +49,9 @@ Stock Management in Django
   <li>Default Admin user:</li>
   <li>Username: admin</li>
   <li>Password: admin</li>
-  <li>#### Installation </li>
+</ul>
+### Installation
+<ul>
   <li>Just install django and python</li>
   <li>Execute runserver.exe</li>
   <li>Acess the application in LocalHost URL (http://127.0.0.1:8000/stock/)</li>
