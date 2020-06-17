@@ -50,7 +50,9 @@ Stock Management in Django
   <li>Username: admin</li>
   <li>Password: admin</li>
 </ul>
+
 ### Installation
+
 <ul>
   <li>Just install django and python</li>
   <li>Execute runserver.exe</li>
