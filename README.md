@@ -1,13 +1,13 @@
 # Stock Management
-Stock Management in Django
 
-### Web Application that consist in a stock management system where you can add, remove, edit products and save into a database.
+
+### A Stock management web application where you can add, remove, edit and save products into a database.
 
 
 <img src="images/img_1.png" width=100%>
 
 
-##### This application count with a User System that allow website admin to choose who can view, edit or manage the products.
+##### This application has a User System that allow website admin to choose who can view, edit or manage the products.
 
 ##### Each product have his own history that can be viewed in product detail or History Tab.
 
