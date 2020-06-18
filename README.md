@@ -1,5 +1,6 @@
 # Stock Management
 
+#### Status: This project isnt finished yet
 
 ### A Stock management web application where you can add, remove, edit and save products into a database.
 
