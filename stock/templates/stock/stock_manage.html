@@ -15,7 +15,7 @@
 	
 	<div class="tabs-button">
 		<h1 id=#tit style="color: gray; font-size: 24px;"> Stock Manager </h1>
-		<p style="color: gray; width: 100%; margin:auto;">	Register or Remove items from database, </p>
+		<p style="color: gray; width: 100%; margin:auto;">	Register or Remove Products from database, </p>
 		<button    onclick="openTab('add')" class="bt add"   >Register</button>
 		<button onclick="openTab('remove')" class="bt remove">Remove</button>
 	</div>
@@ -37,8 +37,8 @@
 
 
 			<div class='maingroup' style='overflow: auto;'>
-				<h1> Register New Item </h1>
-				<p id = "obs" style="text-align: center; width: 80%; font-size: 14px; "> * Do not register an item that already exists in your database </p>
+				<h1> Register New Product </h1>
+				<p id = "obs" style="text-align: center; width: 80%; font-size: 14px; "> * Do not register an product that already exists in your database </p>
 				{% for field in form %}
 				<div class='formgroup'>
 					
@@ -56,7 +56,7 @@
 	</div>
 	<div id="remove" class="tab">
 		<div style="text-align: center;">
-		<h2> Remove Item</h1>
+		<h2> Remove Product</h1>
 		<p> Use " / " to separate filters. Ex: Wines/1940 </p>
 		</div>
 		<div style="text-align: center;"><input type="text" id="myInput" onkeyup="intSearch()" placeholder="Name, Pkey, Category, Qnt....">
