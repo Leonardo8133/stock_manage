@@ -1,0 +1,30 @@
+.title {
+	text-align: center;
+	color: gray;
+	width: 60%;
+	border-bottom: 1px solid gray;
+	margin: auto;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+table {
+	color: gray;
+	text-align: center;
+	margin: auto;
+	padding: 10px 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: 0px auto;
+	padding: 10px 20px;
+	width: 90%;
+}
+
+tr.item td{
+	border-bottom: 1px solid rgba(50,50,50,0.7);
+	color: lightgray;
+	font-size: 16px;
+	padding-bottom: 5px;
+}
+tr.his td {
+	padding: 0px 10px;
+	font-size: 14px;
+}

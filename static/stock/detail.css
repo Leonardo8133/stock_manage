@@ -1,0 +1,154 @@
+.sucess, .remove {
+	color: lightgrey;
+	padding: 30px;
+	text-align: center;
+	}
+
+.sucess {
+		background-color: rgba(128, 200, 100, 0.3);
+	}
+
+.remove {
+		background-color: rgba(255, 100, 100, 0.3);
+	}
+
+.mainbox {
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	margin-top: 30px;
+	border-radius: 10px;
+	margin-bottom: 40px;
+
+}
+
+
+.mainbox h2 {
+	color: gray;
+	font-size: 30px;
+	font-weight: normal;
+	font-family: 'Lato', sans-serif;
+}
+
+.mainbox table {
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	list-style-type: none;
+	background-color: rgba(10, 10, 10, 0.8);
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 0px;
+	width: 70%;
+	color:gray;
+	text-align: center;
+	border-collapse: collapse;
+	margin: auto;
+
+	
+}
+
+
+.mainbox table tr {
+	transition: 0.1s;
+	margin: 0px;
+	padding: 5px 30px;
+	font-family: 'Lato', sans-serif;
+	width: 90%;
+}
+
+.mainbox table td {
+	padding: 10px 20px;
+	text-align: left;
+}
+.mainbox table tr:hover {
+	color: white;
+	background-color: rgba(0,0,0,1);
+}
+
+.mainbox td #but {
+	margin:auto;
+	text-align: center;
+	justify-content: center;
+	padding: 25px 10px;
+}
+
+.mainbox table td button {
+	width: 80%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 0px;
+	transition: 0.2s;
+	background-color: rgba(128, 170, 225, 0.7);
+}
+
+.mainbox table tr button:hover {
+	background-color: rgba(128, 170, 255, 1);
+	transform: scale(1.1);
+	}
+
+.mainbox table tr.hide {
+	width: 90%;
+	text-align: center;
+	padding: 10px;
+	outline: none;
+}
+
+.mainbox table input {
+	width: 30%;
+	text-align: center;
+	margin: auto;
+	padding: 10px 5px;
+	outline: none;
+}
+
+table input.subm{
+	background-color: rgba(100, 255, 100, 0.7);
+	border: 0px;
+	border-radius: 6px;
+	transition: 0.2s;
+	outline: none;
+}
+
+
+
+.subm input:hover {
+	background-color: rgba(100, 255, 100, 1);
+	transform: scale(1.05);
+}
+
+
+
+.histbox{
+	width: 70%;
+	text-align: center;
+	margin: auto;
+	padding: 0px;
+	background-color: rgba(10, 10, 10, 0.8); 
+	border-radius: 8px;
+	padding: 20px 10px;
+	color: gray;
+	margin-bottom: 20px;
+
+	
+}
+.histli table tr {
+	background-color: rgba(10, 10, 10, 0.8);
+	padding: 20px 30px;
+	list-style-type: none;
+	font-size: 16px;
+	
+	margin: auto;
+	width: 70%;
+	text-align: left;
+	margin-bottom: 0px;
+	border:none;
+	display: table-row;
+}
+.histli  td {
+	color: gray;
+	padding: 5px 10px;
+
+}
+
+
+
