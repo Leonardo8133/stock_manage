@@ -26,6 +26,10 @@ function slide_update() {
 function switch_pause(){
 	paused = !paused;
 	document.getElementById('button').classList.toggle('pressed');
+	if (document.getElementById('button').innerHTML == "Play Slides") {
+		document.getElementById('button').innerHTML = "Stop Slides"
+	}else{		document.getElementById('button').innerHTML = "Play Slides"
+}
 
 }
 
