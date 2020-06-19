@@ -1,6 +1,6 @@
 # Stock Management
 
-#### Status: This project isn't finished yet. Link to Simple Apresentation <a href="https://leonardo8133.github.io/stock_manage/"> Click </a>
+#### Status: This project isn't finished yet. Link to a Simple Web Apresentation <a href="https://leonardo8133.github.io/stock_manage/"> Click </a>
 
 ### A Stock management web application where you can add, remove, edit and save products into a database.
 
