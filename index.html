@@ -3,21 +3,37 @@
 <head>
 	<title>Stock Management by leo</title>
 	<link rel="stylesheet" type="text/css" href="static/git/gitpage.css">
+	<script type="text/javascript" src='static/git/javascript.js'>
+	
+	</script>
 </head>
 <body>
-
-<h1 class='center'> Stock Management in django </h1>
-<p class='center'>by: Leonardo de Souza - Florianópolis, Brazil.</p>
-<div class='center'>
-<h2>Introduction</h2>
-<p>This project was my introduction to Web Development</p>
-<p>This stock management system was made in django with all Front-End page coded by hand (with no libs) </p>
-<p>The goal is have a simple, fast, elegant and FREE solution for small business stock problems</p>
-<p>Link to page source code  <a href="https://github.com/Leonardo8133/stock_manage">Git - Stock Management</a></p>
-</div>
-
-
-
+	<div class='nav'>
+		<h1 class='center' style="font-size: 32px;"> Stock Management in django </h1>
+		<p class='center'>by: Leonardo de Souza - Florianópolis, Brazil.</p>
+	</div>
+	<div class='center w50'>
+		<div class="left">			
+			<p>This project was my introduction to Web Development</p>
+			<p>This stock management system was made in django with all Front-End page coded by hand (with no libs) </p>
+			<p>The goal is have a simple, fast, elegant and FREE solution for small business stock problems</p>
+			<p>Link to page source code  <a href="https://github.com/Leonardo8133/stock_manage" style="color: white;">Git - Stock Management</a>
+			<p>The project isnt finished yet!</p>
+			</p>
+		</div>
+	</div>
+	<div class='center' style="margin-top: 20px;">
+		<button id="button"  onclick="switch_pause();">Play Slides</button>
+	</div>
+	<div class="slidediv">
+		<ul class='center'>
+			<li><img class="slideimg fade" style="display: block;" src="static/git/showcase_1.png" onclick="full(this)"></li>
+			<li><img class="slideimg fade"  style="display: none;" src="static/git/showcase_2.png" onclick="full(this)"></li>
+			<li><img class="slideimg fade"  style="display: none;" src="static/git/showcase_3.png" onclick="full(this)"></li>
+			<li><img class="slideimg fade"  style="display: none;" src="static/git/showcase_4.png" onclick="full(this)"></li>
+		</ul>
+	</div>
+	<script>setTimeout(slide_update, 2000);</script>
 </body>
 </html>
 
