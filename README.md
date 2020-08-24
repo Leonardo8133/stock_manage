@@ -47,7 +47,7 @@ This application has a User System that allow website admin to choose who can vi
 
 
 <ul>
-  <li>Default Admin user:</li>
+  <li>Admin user.</li>
   <li>Username: admin</li>
   <li>Password: admin</li>
 </ul>
