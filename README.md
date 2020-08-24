@@ -32,7 +32,7 @@ This application has a User System that allow website admin to choose who can vi
 ### View of the complete history.
 
 
-<img src="images/img_6.png" width=100%>
+<img src="images/imag_6.png" width=100%>
 
 ### Manage the product categories and everything in you database through django admin page.
 
