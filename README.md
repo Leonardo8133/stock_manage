@@ -1,40 +1,40 @@
 # Stock Management
-Online version ("public database, user: admin pass: admin")
+Online version ("public database, user: admin / pass: admin")
 https://stock-herok.herokuapp.com/stock/
-#### Status: This project isn't finished yet. Link to a Simple Web Apresentation <a href="https://leonardo8133.github.io/stock_manage/"> Click </a>
+#### Link to a Simple Web Apresentation <a href="https://leonardo8133.github.io/stock_manage/"> Click </a>
 
-### A Stock management web application where you can add, remove, edit and save products into a database.
+#### A Stock management web application where you can add, remove, edit and save products into a database.
 
 
 <img src="images/img_1.png" width=100%>
 
 
-##### This application has a User System that allow website admin to choose who can view, edit or manage the products.
+This application has a User System that allow website admin to choose who can view, edit or manage the products.
 
-##### Each product have his own history that can be viewed in product detail or History Tab.
+ Each product have his own history that can be viewed in product detail or History Tab.
 
 
 <img src="images/img_2.png" width=100%>
 
 
-### You can add or items to a product for stock control.
+### You can add or remove items in a product.
 
 
 <img src="images/img_3.png" width=100%>
 
 
-### You Add or Remove Products
+### You can add or remove products
 
 
 <img src="images/img_4.png" style="display:inline;" width=48.9%><img src="images/img_5.png" style="display:inline;" width=40%>
 
 
-### View the Complete History
+### View of the complete history.
 
 
 <img src="images/img_6.png" width=100%>
 
-### And finally... Manage the Product Categories and Everything in you database through django admin page.
+### Manage the product categories and everything in you database through django admin page.
 
 
 <img src="images/img_7.png" width=100%>
