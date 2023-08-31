@@ -1,17 +1,14 @@
 # Stock Management
-Online version ("public database, user: admin / pass: admin")
-https://stock-herok.herokuapp.com/stock/
-#### Link to a Simple Web Apresentation <a href="https://leonardo8133.github.io/stock_manage/"> Click </a>
+#### Link to the Web Apresentation <a href="https://leonardo8133.github.io/stock_manage/"> Click Here </a>
 
-#### A Stock management web application where you can add, remove, edit and save products into a database.
-
+#### A stock management web application where you can add, remove, edit, and save products into a database.
 
 <img src="images/img_1.png" width=100%>
 
 
-This application has a User System that allow website admin to choose who can view, edit or manage the products.
+This application has a User System that allows the website admin to choose who can view, edit, or manage the products.
 
- Each product have his own history that can be viewed in product detail or History Tab.
+ Each product has its own history that can be viewed in product detail or History Tab.
 
 
 <img src="images/img_2.png" width=100%>
@@ -31,26 +28,11 @@ This application has a User System that allow website admin to choose who can vi
 
 ### View of the complete history.
 
-
 <img src="images/imag_6.png" width=100%>
 
-### Manage the product categories and everything in you database through django admin page.
-
+### Manage the product categories and everything in your database through the Django admin page.
 
 <img src="images/img_7.png" width=100%>
-
-
-
-
-
-
-
-
-<ul>
-  <li>Admin user.</li>
-  <li>Username: admin</li>
-  <li>Password: admin</li>
-</ul>
 
 ### Installation
 
