@@ -35,9 +35,4 @@ This application has a User System that allows the website admin to choose who c
 <img src="images/img_7.png" width=100%>
 
 ### Installation
-
-<ul>
-  <li>Just install django and python</li>
-  <li>Execute runserver.exe</li>
-  <li>Acess the application in LocalHost URL (http://127.0.0.1:8000/stock/)</li>
- </ul>
+ The project already comes with an SQLite database, so you just need to create a virtual environment, install the requirements.txt and runserver.
